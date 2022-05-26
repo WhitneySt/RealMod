@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu';
+}
+
+#cabecera {
+    background-color: #F1F8F6;
+}
+
+#navbar {
+    background-color: white;
+
+}
+
+#logo img {
+    width: 224px;
+    height: 63px;
+    margin-left: 50px;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.icons img {
+    width: 41px;
+    height: 48px;
+}
+
+.icon2 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #00C194;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon2 svg {
+    color: #00C194;
+    width: 20px;
+    height: 20px;
+}
+
+#badges {
+    width: 20px;
+    height: 20px;
+    background-color: #00C194;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    border: none;
+}
+
+#btnplus {
+    width: 169px;
+    height: 44px;
+}
+
+#plusbtn {
+    border-radius: 30px 0 0 30px;
+    background-color: #01AC84;
+}
+
+#plusbtn svg {
+    width: 16px;
+    height: 16px;
+    color: white;
+}
+
+#textbtn {
+    border-radius: 0 30px 30px 0;
+    background-color: #00C194;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#menu a {
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+
+}
+
+.activo1 {
+    color: #00C194 !important;
+    border-bottom: 2px solid #00C194;
+}
+
+#hero-section {
+    width: 100%;
+    background-color: #F1F8F6;
+    padding-top: 15%;
+
+}
+
+#imagen-fondo {
+    width: 100%;
+    margin-top: 15%;
+    z-index: -100;
+}
+
+#imagen-fondo img {
+    width: 100%;
+    object-fit: contain;
+}
+
+
+#hero-info {
+    padding-left: 5%;
+
+}
+
+#hero-info h1 {
+    font-family: 'Mr Dafoe';
+    font-weight: 400;
+    font-size: 79px;
+    color: #E4E7E6;
+}
+
+#hero-info h2 {
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 53px;
+    transform: translateY(-40px);
+    width: 50%;
+}
+
+
+#sbrmenu a {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    color: #000000;
+    background-color: white;
+}
+
+.activo2 {
+    background-color: #00C194 !important;
+    color: white !important;
+}
+
+#groupsearch {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+
+#btnsearch {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 5px 5px 10px;
+    box-shadow: 0px 4px 40px rgba(0, 193, 148, 0.1);
+    border-radius: 8px;
+}
+
+#btnsearch button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-group input {
+    border: none;
+}
+
+.input-group select {
+    border: none;
+    border-left: 2px solid #01AC84;
+    font-family: 'Ubuntu' !important;
+}
+
+main {
+    background-color: #F6F6F6;
+}
+
+.tittle {
+    text-align: center;
+    padding-top: 100px;
+}
+
+.tittle h3 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #00C194;
+    margin: 0;
+}
+
+.tittle h1 {
+    font-family: 'Mr Dafoe';
+    font-weight: 400;
+    font-size: 70px;
+    color: #DBEEEA;
+    z-index: -10;
+    margin: 0;
+    transform: translateY(-25px);
+}
+
+.tittle h2 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 46px;
+    transform: translateY(-70px);
+    margin: 0;
+}
+
+.filterCards {
+    width: 307.5px;
+    height: 280px;
+    background-color: white;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-around;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.filtercard {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-color: #E9FFFA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.filtercard img {
+    width: 55px;
+    height: 55px;
+}
+
+.filterCards button {
+    background-color: transparent;
+    border: none;
+    transform: translateY(20px);
+}
+
+.filterCards h4 {
+    margin-top: 32px;
+}
+
+.activo3 {
+    background-color: #00C194 !important;
+}
+
+.activo3 div {
+    background-color: white !important;
+}
+
+.activo3 h4 {
+    color: white;
+}
+
+#property-card {
+    margin-bottom: 20px;
+}
+
+#proCard h5 {
+    font-weight: 500;
+    font-size: 14px;
+    color: #00C194;
+    margin-top: -30px;
+}
+
+#proCard h6 {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+#location {
+    margin-bottom: 9px;
+}
+
+#location span {
+    font-size: 12px;
+}
+
+#detailPro {
+    display: flex;
+    justify-content: space-between;
+}
+
+#detailPro img {
+    width: 16px;
+    height: 16px;
+}
+
+#detailPro span {
+    font-size: 13px;
+    margin-left: 5px;
+}
+
+#inmueble {
+    padding: 5px;
+    font-size: 14px;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #00C194;
+    position: relative;
+    top: -170px;
+}
+
+#valor {
+    font-size: 19px;
+    font-weight: 700;
+    color: white;
+    position: relative;
+    top: -55px;
+    left: -50px;
+}
+
+#btneliminar {
+    position: relative;
+    top: -180px; 
+    left: 15px;   
+}
+
+#agentes img {
+    width: 306px;
+    height: 440px;
+}
+
+#agen {
+    transform: scale(1.141);
+}
+
+.iconoinactivo {
+    border: 1px solid gray !important;
+
+}
+
+
+.iconoinactivo svg {
+    color: gray !important;
+}
+
+.iconoinactivo span {
+    background-color: gray !important;
+}
+
+.modal-backdrop {
+    z-index: 2 !important;
+}

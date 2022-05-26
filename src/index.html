@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head id="cabecera">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="shortcut icon" href="https://i.ibb.co/R3GDwDQ/Logo1.png" type="image/x-icon">
+
+    <title>Realmod</title>
+</head>
+
+<body>
+    <header>
+        <!--Navbar-->
+        <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+                <a id="logo" class="navbar-brand" href="#"><img src="https://i.ibb.co/y4KzLZ7/Logo.png" alt="Logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse gap-3" id="navbarSupportedContent">
+                    <ul id="menu" class="navbar-nav me-auto mb-2 mb-lg-0 gap-2">
+                        <li class="nav-item">
+                            <a class="nav-link activo1" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Property
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Studio Home</a></li>
+                                <li><a class="dropdown-item" href="#">Apartament</a></li>
+                                <li><a class="dropdown-item" href="#">Villa</a></li>
+                                <li><a class="dropdown-item" href="#">Restaurants</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                    <div class="icons">
+                        <img src="https://i.ibb.co/Yc4F2xB/icon.png" alt="icon1">
+                        <a data-bs-toggle="modal" href="#exampleModal1" role="button" class="icon2 position-relative" id="btnFavorites">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-heart" viewBox="0 0 16 16">
+                                <path
+                                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                            </svg>
+                            <span id="badges"
+                                class="position-absolute top-0 start-100 translate-middle rounded-circle">0
+                            </span>
+                        </a>
+                        <!--Inicio ventana modal favoritos-->
+                        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel"><img style="width: 150px;"
+                                                src="https://i.ibb.co/y4KzLZ7/Logo.png" alt="Logo"></h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="table-responsive">
+                                            <table class="table align-middle">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Property</th>
+                                                        <th>Name</th>
+                                                        <th>Price</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="contenidoFavoritos">
+                                                    <tr>
+                                                        <td><img class="img-fluid"
+                                                                src="https://i.ibb.co/Z6BVfDf/Rectangle1.png"
+                                                                class="card-img-top" alt="propiedad"></td>
+                                                        <td>Nombre de la propiedad</td>
+                                                        <td>$ 18.000</td>
+                                                        <td><button style="background-color: #00C194; border: #00C194;"
+                                                                type="button" class="btn btn-primary">Remove</button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><img class="img-fluid"
+                                                                src="https://i.ibb.co/Z6BVfDf/Rectangle1.png"
+                                                                class="card-img-top" alt="propiedad"></td>
+                                                        <td>Nombre de la propiedad</td>
+                                                        <td>$ 18.000</td>
+                                                        <td><button style="background-color: #00C194; border: #00C194;"
+                                                                type="button" class="btn btn-primary">Remove</button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><img class="img-fluid"
+                                                                src="https://i.ibb.co/Z6BVfDf/Rectangle1.png"
+                                                                class="card-img-top" alt="propiedad"></td>
+                                                        <td>Nombre de la propiedad</td>
+                                                        <td>$ 18.000</td>
+                                                        <td><button style="background-color: #00C194; border: #00C194;"
+                                                                type="button" class="btn btn-primary">Remove</button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><img class="img-fluid"
+                                                                src="https://i.ibb.co/Z6BVfDf/Rectangle1.png"
+                                                                class="card-img-top" alt="propiedad"></td>
+                                                        <td>Nombre de la propiedad</td>
+                                                        <td>$ 18.000</td>
+                                                        <td><button style="background-color: #00C194; border: #00C194;"
+                                                                type="button" class="btn btn-primary">Remove</button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button style="background-color: #00C194; border: #00C194;" type="button"
+                                            class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Fin ventana modal favoritos-->
+
+                        <a class="icon2 iconoinactivo" data-bs-toggle="modal" href="#exampleModalToggle1" role="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-person" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                            </svg>
+                        </a>
+
+                        <!--Inicio ventana modal User Login/Register-->
+
+                        <div class="modal fade" id="exampleModalToggle1" aria-hidden="true"
+                            aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalToggleLabel"><img style="width: 150px;"
+                                                src="https://i.ibb.co/y4KzLZ7/Logo.png" alt="Logo"></h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <span>Login to your Account</span>
+                                        <form id="frmLogin" action="">
+                                            <div class="mb-3">
+                                                <input type="email" class="form-control" id="email"
+                                                    placeholder="Enter your email">
+                                            </div>
+                                            <div class="mb-3">
+                                                <input type="password" class="form-control" id="password"
+                                                    placeholder="Enter your password">
+                                            </div>
+                                            <button style="background-color: #00C194; border: #00C194;" type="submit"
+                                                class="btn btn-primary">Login</button>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <span>If you don't have a Account</span>
+                                        <button style="background-color: #00C194; border: #00C194;"
+                                            class="btn btn-primary" data-bs-target="#exampleModalToggle2"
+                                            data-bs-toggle="modal">Click here</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true"
+                            aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalToggleLabel2"><img style="width: 150px;"
+                                                src="https://i.ibb.co/y4KzLZ7/Logo.png" alt="Logo"></h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <span>Create your Account</span>
+                                        <form id="frmCreateUser" action="">
+                                            <div class="mb-3">
+                                                <input id="name" type="text" class="form-control"
+                                                    placeholder="Enter your name">
+                                            </div>
+                                            <div class="mb-3">
+                                                <input id="email" type="email" class="form-control"
+                                                    placeholder="Enter your email">
+                                            </div>
+                                            <div class="mb-3">
+                                                <input id="userPassword" type="password" class="form-control"
+                                                    placeholder="Enter your password">
+                                            </div>
+                                            <div class="mb-3 form-check">
+                                                <input id="isAdmin" type="checkbox" class="form-check-input">
+                                                <label class="form-check-label" for="exampleCheck1">Are you a admin
+                                                    User?</label>
+                                            </div>
+
+                                            <button style="background-color: #00C194; border: #00C194;" type="submit"
+                                                class="btn btn-primary">Create</button>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button style="background-color: #00C194; border: #00C194;"
+                                            class="btn btn-primary" data-bs-target="#exampleModalToggle1"
+                                            data-bs-toggle="modal">Back to Login</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Fin ventana modal User Login/Register-->
+
+                        <a data-bs-toggle="modal" href="#exampleModal2" role="button" id="btnCart"
+                            class="icon2 position-relative iconoinactivo">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-cart2" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
+                            </svg>
+                            <span id="badges"
+                                class="position-absolute top-0 start-100 translate-middle rounded-circle">0
+                            </span>
+                        </a>
+                        <!--Inicio ventana modal Cart-->
+                        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel"><img style="width: 150px;"
+                                                src="https://i.ibb.co/y4KzLZ7/Logo.png" alt="Logo"></h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="table-responsive">
+                                            <table class="table align-middle">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Property</th>
+                                                        <th>Name</th>
+                                                        <th>Price</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="contenidoCarrito">
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button style="background-color: #00C194; border: #00C194;" type="button"
+                                            class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Fin ventana modal Cart-->
+                    </div>
+                    <div id="btnplus" class="btn-group" role="group" aria-label="Basic mixed styles example">
+                        <button id="plusbtn" type="button" class="btn"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+                            </svg></button>
+                        <button id="textbtn" type="button" class="btn" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal4">Add property</button>
+                        <!--Modal para crear o actualizar propiedades-->
+                        <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel4"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel4"><img style="width: 150px;"
+                                                src="https://i.ibb.co/y4KzLZ7/Logo.png" alt="Logo"></h5>
+                                        <button id="btnCloseModal4" type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form id="frmProperty" action="">
+                                            <div class="mb-3">
+                                                <input type="hidden" class="form-control" id="actionType">
+                                                <input type="text" class="form-control" id="propertyName"
+                                                    placeholder="Enter name property">
+                                            </div>
+                                            <div class="mb-3">
+                                                <input type="url" class="form-control" id="url"
+                                                    placeholder="Enter property picture">
+                                            </div>
+                                            <div class="mb-3">
+                                                <input type="text" class="form-control" id="location"
+                                                    placeholder="Enter property location">
+                                            </div>
+                                            <div class="mb-3">
+                                                <input type="number" class="form-control" id="bathrooms"
+                                                    placeholder="Enter number of bathrooms">
+                                            </div>
+                                            <div class="mb-3">
+                                                <input type="number" class="form-control" id="rooms"
+                                                    placeholder="Enter number of rooms">
+                                            </div>
+                                            <div class="mb-3">
+                                                <input type="number" class="form-control" id="squareMeters"
+                                                    placeholder="property size in square meters">
+                                            </div>
+                                            <div class="mb-3">
+                                                <input type="number" class="form-control" id="price"
+                                                    placeholder="Enter price">
+                                            </div>
+                                            <select class="form-select mb-3" aria-label="Default select example" id="propertyType">
+                                                <option selected>Select property type</option>
+                                                <option value="Apartament">Apartament</option>
+                                                <option value="Studio Home">Studio Home</option>
+                                                <option value="Villa">Villa</option>
+                                                <option value="Restaurant">Restaurant</option>
+                                                <option value="Commercial">Commercial</option>
+                                            </select>
+                                            <select class="form-select mb-3" aria-label="Default select example" id="category">
+                                                <option selected>Select</option>
+                                                <option value="Sell">Sell</option>
+                                                <option value="Buy">Buy</option>
+                                                <option value="Rent">Rent</option>
+                                            </select>
+                                            <div class="mb-3 form-check">
+                                                <input type="checkbox" class="form-check-input" id="smartHome">
+                                                <label class="form-check-label" for="exampleCheck1">Is it a Smart
+                                                    Home?</label>
+                                            </div>
+                                            <div class="mb-3 form-check">
+                                                <input type="checkbox" class="form-check-input" id="parkingSpace">
+                                                <label class="form-check-label" for="exampleCheck1">Does it have parking
+                                                    space?</label>
+                                            </div>
+                                            <div class="mb-3 form-check">
+                                                <input type="checkbox" class="form-check-input" id="swimmingPool">
+                                                <label class="form-check-label" for="exampleCheck1">Does it have
+                                                    swimming pool?</label>
+                                            </div>
+                                            <div class="mb-3 form-check">
+                                                <input type="checkbox" class="form-check-input" id="privateSecurity">
+                                                <label class="form-check-label" for="exampleCheck1">Does it have private
+                                                    security?</label>
+                                            </div>
+                                            <div class="mb-3 form-check">
+                                                <input type="checkbox" class="form-check-input" id="medicalCenter">
+                                                <label class="form-check-label" for="exampleCheck1">Does it have medical
+                                                    center?</label>
+                                            </div>
+                                            <div class="mb-3 form-check">
+                                                <input type="checkbox" class="form-check-input" id="libraryArea">
+                                                <label class="form-check-label" for="exampleCheck1">Does it have library
+                                                    area?</label>
+                                            </div>
+                                            <div class="mb-3 form-check">
+                                                <input type="checkbox" class="form-check-input" id="kingSize">
+                                                <label class="form-check-label" for="exampleCheck1">Does it have King
+                                                    size beds?</label>
+                                            </div>
+                                            <div class="mb-3 form-check">
+                                                <input type="checkbox" class="form-check-input" id="kidsPlayland">
+                                                <label class="form-check-label" for="exampleCheck1">Does it have kid's
+                                                    playlands?</label>
+                                            </div>
+                                            <button style="background-color: #00C194; border: #00C194;" type="submit"
+                                                class="btn btn-primary">Save Change</button>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button id="btnCloseModal4-2" style="background-color: #00C194; border: #00C194;" type="button"
+                                            class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Fin modal para crear o actualizar propiedades-->
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!--fin Navbar-->
+        <!--Hero Section-->
+        <section id="hero-section">
+            <div id="hero-info">
+                <h1>Properties</h1>
+                <h2>Find The Perfect Place to Live With your Family</h2>
+                <div id="searching">
+                    <ul id="sbrmenu" class="nav nav-pills gap-1">
+                        <li class="nav-item">
+                            <a id="Sell" class="nav-link activo2" aria-current="page" href="#">Sell</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="Buy" class="nav-link" href="#">Buy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="Rent" class="nav-link" href="#">Rent</a>
+                        </li>
+                    </ul>
+                    <div id="groupsearch" class="gap-4">
+                        <div class="input-group">
+                            <input id="searchInput" type="text" class="form-control" placeholder="Enter keyword here">
+                            <select class="form-select" id="inputGroupSelect01">
+                                <option selected>Select</option>
+                                <option value="nombre">Property name</option>
+                                <option value="ubicacion">Location</option>
+                                <option value="tipo">Property type</option>
+                                <option value="habitaciones">Rooms</option>
+                                <option value="precio">Price</option>
+                                <option value="banos">Bathrooms</option>
+                            </select>
+                        </div>
+                        <div id="btnsearch" class="gap-2">
+                            <img src="https://i.ibb.co/gvbzd4D/Iconbtm.png" alt="btm">
+                            <button type="button" class="btn gap-1 activo2"><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                </svg><span>Search</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="imagen-fondo">
+                <img src="https://i.ibb.co/CVK4c8D/Image.png" alt="hero">
+            </div>
+        </section>
+        <!--Fin hero section-->
+    </header>
+    <main>
+        <!--Featured-->
+        <section>
+            <div class="tittle">
+                <h3>PROPERTIES</h3>
+                <h1>Featured</h1>
+                <h2>Featured Listings</h2>
+            </div>
+            <div id="filterCardsContainer" class="d-flex justify-content-around flex-wrap">
+                <div id="fc-parking-area" class="filterCards">
+                    <div class="filtercard">
+                        <img src="https://i.ibb.co/c34W7Jg/parking-area1.png" alt="parking-area">
+                    </div>
+                    <h4>Parking Space</h4>
+                    <button><img  id="parking-area" src="https://i.ibb.co/Xk8GDF5/btnflecha.png" alt="flecha"></button>
+                </div>
+                <div id="fc-swimming-area" class="filterCards">
+                    <div class="filtercard">
+                        <img src="https://i.ibb.co/pvVWpBZ/swimming.png" alt="swimming-area">
+                    </div>
+                    <h4>Swimming Pool</h4>
+                    <button><img id="swimming-area" src="https://i.ibb.co/Xk8GDF5/btnflecha.png" alt="flecha"></button>
+                </div>
+                <div id="fc-security" class="filterCards activo3">
+                    <div class="filtercard">
+                        <img src="https://i.ibb.co/CsV18Yc/security.png" alt="security">
+                    </div>
+                    <h4>Privat Security</h4>
+                    <button><img id="security" src="https://i.ibb.co/Xk8GDF5/btnflecha.png" alt="flecha"></button>
+                </div>
+                <div id="fc-medical" class="filterCards">
+                    <div class="filtercard">
+                        <img src="https://i.ibb.co/kBTkKk8/medical.png" alt="medical">
+                    </div>
+                    <h4>Medical Center</h4>
+                    <button><img id="medical" src="https://i.ibb.co/Xk8GDF5/btnflecha.png" alt="flecha"></button>
+                </div>
+                <div id="fc-library" class="filterCards">
+                    <div class="filtercard">
+                        <img src="https://i.ibb.co/YT5ryQt/library.png" alt="library">
+                    </div>
+                    <h4>Library Area</h4>
+                    <button><img id="library" src="https://i.ibb.co/Xk8GDF5/btnflecha.png" alt="flecha"></button>
+                </div>
+                <div id="fc-beds" class="filterCards">
+                    <div class="filtercard">
+                        <img src="https://i.ibb.co/bF5Z4CR/beds.png" alt="beds">
+                    </div>
+                    <h4>King Size Beds</h4>
+                    <button><img id="beds" src="https://i.ibb.co/Xk8GDF5/btnflecha.png" alt="flecha"></button>
+                </div>
+                <div id="fc-smart" class="filterCards">
+                    <div class="filtercard">
+                        <img src="https://i.ibb.co/tp51LxZ/smart.png" alt="smart">
+                    </div>
+                    <h4>Smart Homes</h4>
+                    <button><img id="smart" src="https://i.ibb.co/Xk8GDF5/btnflecha.png" alt="flecha"></button>
+                </div>
+                <div id="fc-playland" class="filterCards">
+                    <div class="filtercard">
+                        <img src="https://i.ibb.co/3Y79067/playland.png" alt="playland">
+                    </div>
+                    <h4>Kid’s Playland</h4>
+                    <button><img id="playland" src="https://i.ibb.co/Xk8GDF5/btnflecha.png" alt="flecha"></button>
+                </div>
+            </div>
+        </section>
+        <!--Fin de featured-->
+        <!--Our properties-->
+        <section>
+            <div class="tittle">
+                <h3>OUR PROPERTIES</h3>
+                <h1>Properties</h1>
+                <h2>Our Featured Properties</h2>
+            </div>
+            <div id="contenedor" class="d-flex justify-content-around flex-wrap">
+            </div>
+        </section>
+        <!--Fin de Our properties-->
+        <!--Our Agents-->
+        <section>
+            <div class="tittle">
+                <h3>EXPERTIES IS HERE</h3>
+                <h1>Our Agents</h1>
+                <h2>Our Exclusive Agents</h2>
+            </div>
+            <div id="agentes" class="d-flex justify-content-evenly flex-wrap">
+                <img src="https://i.ibb.co/thbzx90/agent1.png" alt="agent1">
+                <img src="https://i.ibb.co/qpqqLdc/agent2.png" alt="agent2">
+                <img src="https://i.ibb.co/jLpmKM2/agent3.png" alt="agent3">
+                <img id="agen" src="https://i.ibb.co/KWJ71gT/agent4.png" alt="agent4">
+            </div>
+        </section>
+        <!--Fin Our Agents-->
+        <section class="p-2 mt-5">
+            <img class="img-fluid" src="https://i.ibb.co/5BpQLTg/whoweare.png" alt="whoweare">
+        </section>
+        <section class="p-2 mt-5">
+            <img class="img-fluid" src="https://i.ibb.co/WHX13X9/Apartmentsplan.png" alt="Apartmentsplan">
+        </section>
+        <section class="p-2 mt-5">
+            <img class="img-fluid" src="https://i.ibb.co/F00rmLH/Our-Partners.png" alt="Our-Partners">
+        </section>
+        <section class="mt-5">
+            <img class="mt-5 img-fluid" src="https://i.ibb.co/Gpqg8X5/Become-Agent.png" alt="Become-Agent">
+        </section>
+    </main>
+    <footer>
+        <img class="img-fluid" src="https://i.ibb.co/RjC9Tt6/Fotter.png" alt="footer">
+    </footer>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>        
+
+</body>
+
+</html>
