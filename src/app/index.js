@@ -430,7 +430,7 @@ frmCreateUser.addEventListener('submit', async (e) => {
     e.preventDefault();
     try {
         const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
+        const email = document.getElementById('userEmail').value;
         const password = document.getElementById('userPassword').value;
         const isAdmin = document.getElementById('isAdmin').checked;
     
@@ -530,6 +530,25 @@ frmPropiedad.addEventListener('submit', async (e) => {
             await Put(`${url}/propiedades/${propertyId}`, propertyInfo);
             mensaje = "Propiedad modificada correctamente!";
         }
+
+        document.getElementById("actionType").value = "";
+        document.getElementById("propertyName").value = "";
+        document.getElementById("url").value = "";
+        document.getElementById("location").value = "";
+        document.getElementById("bathrooms").value = "";
+        document.getElementById("rooms").value = "";
+        document.getElementById("squareMeters").value = "";
+        document.getElementById("price").value = "";
+        document.getElementById("propertyType").value = "";
+        document.getElementById("category").value = "";
+        document.getElementById("smartHome").checked = false;
+        document.getElementById("parkingSpace").checked = false;
+        document.getElementById("swimmingPool").checked = false;
+        document.getElementById("privateSecurity").checked = false;
+        document.getElementById("medicalCenter").checked = false;
+        document.getElementById("libraryArea").checked = false;
+        document.getElementById("kingSize").checked = false;
+        document.getElementById("kidsPlayland").checked = false;
 
         await cargarPropiedades();
         swal("Bien hecho!", mensaje , "success");
